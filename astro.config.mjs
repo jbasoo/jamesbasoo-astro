@@ -3,11 +3,6 @@
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig, fontProviders } from 'astro/config';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
-
 import netlify from '@astrojs/netlify';
 
 // https://astro.build/config
@@ -37,7 +32,8 @@ export default defineConfig({
     vite: {
         resolve: {
             alias: {
-                '@src': `${__dirname}/src`,
+                "@": new URL('./', import.meta.url).pathname,
+                "@src": new URL('./src', import.meta.url).pathname,
             },
         },
     },
