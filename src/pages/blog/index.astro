@@ -1,10 +1,8 @@
 ---
-import { getCollection } from 'astro:content';
 import BlogIndexLayout from '../../layouts/BlogIndex.astro'
+import { getPosts } from '../../utils/blog';
 
-const posts = (await getCollection('blog', ({ data }) => import.meta.env.PROD ? !data.draft : true)).sort(
-	(a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf(),
-);
+const posts = await getPosts();
 ---
 
 <BlogIndexLayout posts={posts} title='Blog' description='Ramblings of the most humble, genius, 1000x developer in the universe.' />
