@@ -1,0 +1,11 @@
+---
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import Layout2Column from '../layouts/2Column.astro';
+import Main from '../content/cv/main.mdx'
+import Aside from '../content/cv/aside.mdx'
+---
+
+<Layout2Column title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <div class="card trim-block-margins" slot="main"><Main /></div>
+  <div class="card trim-block-margins" slot="aside"><Aside /></div>
+</Layout2Column>

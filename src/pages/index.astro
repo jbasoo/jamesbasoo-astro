@@ -1,11 +1,24 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import Layout1Column from '../layouts/1Column.astro';
+import Content from '../content/index.mdx'
 ---
 
-<!doctype html>
+<Layout1Column title={SITE_TITLE} description={SITE_DESCRIPTION}>
+	<!-- <div class="card"> -->
+		<Content />
+	<!-- </div> -->
+</Layout1Column>
+
+<style>
+	.intro {
+		> *:first-child {
+			margin-top: 0;
+		}
+	}
+</style>
+
+<!-- <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
@@ -46,4 +59,4 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 		</main>
 		<Footer />
 	</body>
-</html>
+</html> -->

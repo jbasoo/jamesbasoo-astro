@@ -1,0 +1,7 @@
+@custom-media	--bp-2xs (width > 360px);
+@custom-media	--bp-xs (width > 480px);
+@custom-media	--bp-sm (width > 640px);
+@custom-media	--bp-md (width > 768px);
+@custom-media	--bp-lg (width > 1024px);
+@custom-media	--bp-xl (width > 1280px);
+@custom-media	--bp-2xl (width > 1536px);

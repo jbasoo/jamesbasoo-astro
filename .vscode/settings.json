@@ -1,0 +1,10 @@
+{
+  // Editor
+  "editor.formatOnSave": true,
+  // Eslint
+  "eslint.validate": ["astro", "typescript", "javascript"],
+  // "[astro]": {
+  //   "editor.defaultFormatter": "astro-build.astro-vscode"
+  // },
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}

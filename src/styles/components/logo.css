@@ -1,0 +1,116 @@
+
+.logo {
+  margin-inline: auto;
+  width: max-content;
+	height: calc(var(--grid-size));
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: calc(var(--mark-size) * 0.5);
+  align-items: center;
+  color: var(--c-text);
+  transition:
+    color var(--transition-duration),
+    background var(--transition-duration),
+    text-shadow var(--transition-duration),
+    border-color var(--transition-duration)
+  ;
+	text-decoration: none;
+
+  &:hover {
+    color: var(--c-gray-900);
+
+    & .group.base { opacity: 0; }
+    & .group.interaction { opacity: 1; }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: white;
+
+    &:hover {
+      text-shadow: 0 0 1rem var(--c-yellow-600);
+    }
+	}
+}
+
+.pre-mark {
+  justify-self: end;
+}
+
+/* .post-mark {
+} */
+
+.pre-mark,
+.post-mark {
+  line-height: 1;
+  font-size: min(calc(var(--mark-size) * 1.8), 8cqw);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.mark {
+  width: var(--mark-size);
+  height: var(--mark-size);
+  position: relative;
+  animation: 15s linear infinite rotate;
+
+  & .group {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity var(--transition-duration);
+
+    &.base {
+      & .circle {
+        mix-blend-mode: screen;
+      }
+    }
+
+    &.interaction {
+      opacity: 0;
+
+      & .circle {
+        mix-blend-mode: multiply;
+      }
+    }
+  }
+
+  & .circle {
+    width: var(--mark-circle-size);
+    height: var(--mark-circle-size);
+    position: absolute;
+    top: 0;
+    left: calc(50% - calc(var(--mark-circle-size) / 2));
+    transform-origin: center calc(var(--mark-size) / 2);
+    border-radius: var(--mark-circle-size);
+    mix-blend-mode: screen;
+
+    @media (prefers-color-scheme: dark) {
+      background: var(--c-yellow-500);
+    }
+  }
+
+  & .red {
+    background: var(--c-red-500);
+  }
+
+  & .green {
+    background: var(--c-green-500);
+    transform: rotate(240deg);
+  }
+
+  & .blue {
+    background: var(--c-blue-500);
+    transform: rotate(120deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

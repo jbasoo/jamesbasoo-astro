@@ -1,0 +1,50 @@
+---
+import Layout1Column from './1Column.astro';
+// import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
+
+type BlogIndexPost = CollectionEntry<"blog">;
+
+type Props = {
+  title: string;
+  description: string;
+  posts: BlogIndexPost[];
+};
+
+const { title, description, posts } = Astro.props as Props;
+---
+
+<style>
+	@import url(@src/styles/layouts/blog-index.css) layer(layouts);
+</style>
+
+<Layout1Column title={title} description={description}>
+  <h1>Blog</h1>
+
+  <ul class="postlist">
+    {
+      posts.map((post) => (
+        <li class="card postlist-item">
+          <article class="trim-block-margins">
+            <h3 class="postlist-item__title">
+              <a href={`/blog/${post.id}/`}>{ post.data.title }</a>
+            </h3>
+            { post.data.publishedDate && <p><FormattedDate date={post.data.publishedDate} /></p> }
+            {/* { post.data.heroImage && <Image width={720} height={360} src={post.data.heroImage} alt="" /> } */}
+            { post.data.description && (<p>{ post.data.description }</p>) }
+            {/* {% if post.date %}<time class="postlist-item__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>{% endif %} */}
+          </article>
+          {/* <h4 class="title">
+            <a href={`/blog/${post.id}/`}>
+              {post.data.title}
+            </a>
+          </h4>
+          <p class="date">
+            <FormattedDate date={post.data.publishedDate} />
+          </p> */}
+        </li>
+      ))
+    }
+  </ul>
+</Layout1Column>
