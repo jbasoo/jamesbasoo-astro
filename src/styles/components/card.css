@@ -3,6 +3,7 @@
 	overflow: clip;
 	background: white;
 	border-radius: 1rem;
+	border: 1px solid white;
 	box-shadow: var(--box-shadow);
 	overflow: hidden;
 	container-type: inline-size;
@@ -16,6 +17,7 @@
 
 	@media (prefers-color-scheme: dark) {
 		background: var(--c-gray-850);
+		border-color: var(--c-gray-800);
 	}
 }
 
