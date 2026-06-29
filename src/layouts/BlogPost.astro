@@ -9,7 +9,7 @@ type Props = CollectionEntry<'blog'>['data'];
 const { title, description, publishedDate, updatedDate, heroImage } = Astro.props;
 ---
 <style>
-	@import url(@src/styles/layouts/blog-post.css) layer(layouts);
+	@import url(@src/styles/layouts/blog-post.css) layer(components.astro.layouts);
 </style>
 
 <BaseLayout title={title} description={description}>

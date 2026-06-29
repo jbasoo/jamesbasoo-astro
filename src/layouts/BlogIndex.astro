@@ -16,7 +16,7 @@ const { title, description, posts } = Astro.props as Props;
 ---
 
 <style>
-	@import url(@src/styles/layouts/blog-index.css) layer(layouts);
+	@import url(@src/styles/layouts/blog-index.css) layer(components.astro.layouts);
 </style>
 
 <Layout1Column title={title} description={description}>

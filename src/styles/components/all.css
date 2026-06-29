@@ -1,8 +1,10 @@
-@import url('design-system.css');
-@import url('header.css');
-@import url('logo.css');
-@import url('nav.css');
-@import url('footer.css');
-@import url('card.css');
-@import url('social-icons.css');
-@import url('feature-fallback.css');
+@layer global, astro.layouts, astro.components;
+
+@import url('design-system.css') layer(global);
+@import url('header.css') layer(global);
+@import url('logo.css') layer(global);
+@import url('nav.css') layer(global);
+@import url('footer.css') layer(global);
+@import url('card.css') layer(global);
+@import url('social-icons.css') layer(global);
+@import url('feature-fallback.css') layer(global);

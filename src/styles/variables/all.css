@@ -1,6 +1,6 @@
 @import url('custom-media.css');
-@import url('color.css') layer(color);
-@import url('typography.css') layer(typography);
+@import url('color.css');
+@import url('typography.css');
 
 :root {
   --transition-duration: 0.12s;
