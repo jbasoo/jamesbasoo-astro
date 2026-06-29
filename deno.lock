@@ -20,6 +20,7 @@
         "npm:postcss-easing-gradients@^3.0.1",
         "npm:postcss-import@^16.1.1",
         "npm:postcss-nesting@14",
+        "npm:postcss-utopia@^1.1.0",
         "npm:prettier-plugin-astro@~0.14.1",
         "npm:prettier@^3.8.3",
         "npm:sharp@~0.34.3"

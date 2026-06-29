@@ -21,6 +21,7 @@
     "postcss-easing-gradients": "^3.0.1",
     "postcss-import": "^16.1.1",
     "postcss-nesting": "^14.0.0",
+    "postcss-utopia": "^1.1.0",
     "sharp": "^0.34.3"
   },
   "devDependencies": {

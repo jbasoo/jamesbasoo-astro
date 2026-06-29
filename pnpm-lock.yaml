@@ -35,6 +35,9 @@ importers:
       postcss-nesting:
         specifier: ^14.0.0
         version: 14.0.0(postcss@8.5.15)
+      postcss-utopia:
+        specifier: ^1.1.0
+        version: 1.1.0(postcss@8.5.15)
       sharp:
         specifier: ^0.34.3
         version: 0.34.5
@@ -3540,6 +3543,11 @@ packages:
     resolution: {integrity: sha512-orRsuYpJVw8LdAwqqLykBj9ecS5/cRHlI5+nvTo8LcCKmzDmqVORXtOIYEEQuL9D4BxtA1lm5isAqzQZCoQ6Eg==}
     engines: {node: '>=4'}
 
+  postcss-utopia@1.1.0:
+    resolution: {integrity: sha512-ZzrQvD+WAISDDts0YHn8ChCPfaprMvN2pokl2Yzpa0isuDT9oTbwuwo0Mbwww/c8eMG7uia7PIBVmWWRSLuwDw==}
+    peerDependencies:
+      postcss: ^8.4.33
+
   postcss-value-parser@3.3.1:
     resolution: {integrity: sha512-pISE66AbVkp4fDQ7VHBwRNXzAAKJjw4Vw7nWI/+Q3vuly7SNfgYXvm6i5IgFylHGK5sP/xHAbB7N49OS4gWNyQ==}
 
@@ -4235,6 +4243,9 @@ packages:
 
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
+
+  utopia-core@1.6.0:
+    resolution: {integrity: sha512-1t74XWRugoMxwbPufCBlBRBfp4ebwXh9dLRoEEywAroO3prOQUyGykX4G4o5kHyX5PbfB3Zly1AjP2epeq6ycA==}
 
   validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
@@ -8452,6 +8463,12 @@ snapshots:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
 
+  postcss-utopia@1.1.0(postcss@8.5.15):
+    dependencies:
+      postcss: 8.5.15
+      postcss-value-parser: 4.2.0
+      utopia-core: 1.6.0
+
   postcss-value-parser@3.3.1: {}
 
   postcss-value-parser@4.2.0: {}
@@ -9369,6 +9386,8 @@ snapshots:
   urlpattern-polyfill@8.0.2: {}
 
   util-deprecate@1.0.2: {}
+
+  utopia-core@1.6.0: {}
 
   validate-npm-package-license@3.0.4:
     dependencies:

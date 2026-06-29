@@ -4,6 +4,7 @@ import { getPosts } from '../../utils/blog';
 
 export async function GET(context) {
 	const posts = await getPosts();
+
 	return rss({
 		title: SITE_TITLE,
 		description: SITE_DESCRIPTION,

@@ -31,7 +31,7 @@
 .postlist-item__date {
   display: block;
   color: var(--c-gray-600);
-  font-size: var(--font-size--sm);
+  font-size: var(--step--1);
 
   @media (prefers-color-scheme: dark) {
     color: var(--c-gray-400);

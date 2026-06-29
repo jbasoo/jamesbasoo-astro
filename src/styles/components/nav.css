@@ -11,7 +11,7 @@
 	min-height: var(--grid-size);
 	/* column-gap: 1.2rem; */
 	/* will-change: transform; */
-	font-size: var(--font-size--md);
+	font-size: var(--step-0);
 
 	& a {
 		display: flex;
