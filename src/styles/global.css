@@ -1,7 +1,7 @@
+@layer reset, variables, base, layouts, components, utilities;
+
 @import 'reset.css' layer(reset);
 @import 'variables/all.css' layer(variables);
 @import 'base/all.css' layer(base);
 @import 'components/all.css' layer(components);
 @import 'utilities.css' layer(utilities);
-
-@layer reset, variables, base, layouts, components, utilities;

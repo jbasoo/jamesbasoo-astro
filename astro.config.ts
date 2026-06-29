@@ -48,6 +48,9 @@ export default defineConfig({
     adapter: netlify(),
 
     vite: {
+        build: {
+            cssMinify: 'esbuild', // Fixes Lightning CSS stripping bare @layer definition, breaking the order.
+        },
         resolve: {
             alias: {
                 "@": new URL('./', import.meta.url).pathname,

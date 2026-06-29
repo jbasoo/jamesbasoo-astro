@@ -1,41 +1,41 @@
-@import url('custom-media.css') layer(color);
+@import url('custom-media.css');
 @import url('color.css') layer(color);
 @import url('typography.css') layer(typography);
 
 :root {
   --transition-duration: 0.12s;
 
-	--mark-size: min(var(--grid-size) * 0.4, 6vw);
+  --mark-size: min(var(--grid-size) * 0.4, 6vw);
   --mark-circle-size: calc(var(--mark-size) * 0.666666666);
   --mark-circle-offset: calc(var(--mark-size) / 2 * 0.33333333);
 
   --box-shadow:
-		0 0.1rem 0.1rem hsla(0, 0%, 0%, 0.1),
-		0 0.1rem 0.4rem hsla(0, 0%, 0%, 0.04),
-		0 0.1rem 0.6rem hsla(0, 0%, 0%, 0.06)
-	;
+    0 0.1rem 0.1rem hsla(0, 0%, 0%, 0.1),
+    0 0.1rem 0.4rem hsla(0, 0%, 0%, 0.04),
+    0 0.1rem 0.6rem hsla(0, 0%, 0%, 0.06)
+  ;
   --box-shadow--hover:
-		0 0.1rem 0.1rem hsla(0, 0%, 0%, 0.1),
-		0 0.1rem 0.6rem hsla(0, 0%, 0%, 0.06),
-		0 0.1rem 0.8rem hsla(0, 0%, 0%, 0.08)
-	;
+    0 0.1rem 0.1rem hsla(0, 0%, 0%, 0.1),
+    0 0.1rem 0.6rem hsla(0, 0%, 0%, 0.06),
+    0 0.1rem 0.8rem hsla(0, 0%, 0%, 0.08)
+  ;
 
   --grid-line-color: var(--c-blue-200);
   --grid-line-thickness: .0625rem;
   --grid-size: 2.8125rem;
 
-	--gap: 24px;
+  --gap: 24px;
 
   --c-page-background: var(--c-gray-100);
   --c-text: var(--c-gray-700);
 
   --border-radius-500: 0.2rem;
 
-	@media (prefers-color-scheme: dark) {
-		--c-page-background: var(--c-gray-900);
-		--c-text: var(--c-gray-100);
-		--grid-line-color: var(--c-yellow-700);
-	}
+  @media (prefers-color-scheme: dark) {
+    --c-page-background: var(--c-gray-900);
+    --c-text: var(--c-gray-100);
+    --grid-line-color: var(--c-yellow-700);
+  }
 }
 
 /* @link https://utopia.fyi/space/calculator?c=320,16,1.125,1240,18,1.125,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,&g=s,l,xl,12 */
