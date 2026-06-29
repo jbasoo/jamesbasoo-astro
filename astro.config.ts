@@ -51,13 +51,13 @@ export default defineConfig({
         build: {
             cssMinify: false, // Fixes Lightning CSS stripping bare @layer definition, breaking the order.
         },
-        css: {
-            postcss: {
-                plugins: [
-                    (await import('cssnano')).default({ preset: 'default' }),
-                ],
-            },
-        },
+        // css: {
+        //     postcss: {
+        //         plugins: [
+        //             (await import('cssnano')).default({ preset: 'default' }),
+        //         ],
+        //     },
+        // },
         resolve: {
             alias: {
                 "@": new URL('./', import.meta.url).pathname,
