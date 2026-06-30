@@ -32,8 +32,6 @@ const { title, description, image = FallbackImage } = Astro.props;
 />
 <meta name="generator" content={Astro.generator} />
 
-<Font cssVariable="--font-atkinson" preload />
-
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
 
@@ -56,6 +54,11 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
 
-<style>
-	@layer reset, variables, base, components, utilities;
-</style>
+<Font cssVariable="--font-atkinson" preload />
+
+<!-- Hack to ensure the layer order config is rendered before any other CSS -->
+<Fragment is:raw>
+	<style>
+		@layer reset, variables, base, layouts, components, utilities;
+	</style>
+</Fragment>
