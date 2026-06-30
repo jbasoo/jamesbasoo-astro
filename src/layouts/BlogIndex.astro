@@ -3,6 +3,7 @@ import Layout1Column from './1Column.astro';
 // import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
+import '@src/styles/layouts/blog-index.css'
 
 type BlogIndexPost = CollectionEntry<"blog">;
 
@@ -14,10 +15,10 @@ type Props = {
 
 const { title, description, posts } = Astro.props as Props;
 ---
-
+<!--
 <style>
 	@import url(@src/styles/layouts/blog-index.css) layer(components);
-</style>
+</style> -->
 
 <Layout1Column title={title} description={description}>
   <h1>Blog</h1>
